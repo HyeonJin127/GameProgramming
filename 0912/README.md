@@ -36,9 +36,42 @@ void gotoxy(int x, int y) {
 
 <h3 id='02'>화면 지우기</h3>
 
+- 콘솔 창의 내용 삭제
+- Visual C++
+  ```C
+  #include <stdlib.h>
+  system("cls");
+  ```
+  
+- Turbo C/C++
+  ```C
+  #include <conio.h>
+  clrscr();
+  ```
+
+- [clrScreen.c](crlScreen.c) 
+
+- [clrScreen2.c](crlScreen2.c)
+
 ---
 
 <h3 id='03'>ASCII Code & Scan Code</h3>
+
+- 아스키 코드 : 컴퓨터 내부에서 문자를 처리 (또는 전송) 하기 위한 일종의 규칙으로, 'a'라는 문자에 대해서 미리 약속한 코드 값을 의미
+- 스캔 코드 : 각각의 키(key)에 대한 코드 값을 의미
+
+- 일반적으로 스캔 코드는 확장키 코드를 말함.
+- 2바이트로써 상위 바이트는 스캔 코드이고 하위 바이트는 아스키 코드로 구성.
+- 확장키 코드란 1 byte 에 해당하는 256개의 아스키코드로 나타낼 수 없는 키를 말하며 화살표 키를 포함한 Home, End, Page Up, Page Down 등이 있다.
+
+|코드|상위 1 byte|하위 1 byte|
+|:---:|---:|---:|
+|아스키 코드|0|스캔코드|
+|확장 코드|스캔코드|0|
+
+- [asciiORscan.c](asciiORscan.c)
+  
+- [moveArrowKey.c](moveArrowKey.c)
 
 ---
 
